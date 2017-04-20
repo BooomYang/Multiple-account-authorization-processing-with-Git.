@@ -1,8 +1,8 @@
 # Multiple-account-authorization-processing-with-Git.
 
-# 简单来讲,Git权限校验方式有两种,以github为例: 
- * 1).HTTPS URLs
- * 2).SSH URLs
+简单来讲,Git权限校验方式有两种,以github为例: 
+  1).HTTPS URLs
+  2).SSH URLs
  
  
 一.HTTPS URLs
@@ -18,12 +18,17 @@ Mac系统中:keychain会存储用户第一次输入的账户密码,下次访问�
 
 ps.题外话
 生成SSH key步骤: 
-  1). # $ cd ~/.ssh
-        $ ls
-      查看是否有id_rsa、id_rsa.pub,如果有可跳过步骤2.
+  1). 
+  
+  # $ cd ~/.ssh   $ ls
+  check if ssh key exist   
+        
+      
+      查看是否有id_rsa、id_rsa.pub,如果有可跳过步骤2.
   
   2). # $ ssh-keygen -t rsa -C "your_email@example.com"  
-      生成秘钥. 
+      
+      生成秘钥. 
       
       Generating public/private rsa key pair.
       # Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter] 
