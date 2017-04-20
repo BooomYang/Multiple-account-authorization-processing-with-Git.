@@ -2,41 +2,21 @@
 ### 简单来讲,Git权限校验方式有两种,以github为例: 
     
     
-* HTTPS URLs 
-
+#### `HTTPS URLs`<br>
 实际就是校验github输入的账户和密码.
     
-Mac系统中:keychain会存储用户第一次输入的账户密码,下次访问仓库时自动读取,不必重复输入.
+Mac系统中:keychain会存储用户第一次输入的账户密码,下次访问仓库时自动读取,不必重复输入.<br>
 非Mac:Git提供credential helper机制,下次访问时自动读取.
 ```c
 $ git config --global credential.helper cache (输入的账号密码会在内存中缓存一段时间,默认15分钟)
 $ git config --global credential.helper store (输入的账号密码会存储在 ~/.git-credentials中)   
 ```
+#### `SSH URLs`
+     
 
-
-##### 2).SSH URLs
- 
- 
-一.HTTPS URLs
-    实际就是校验github输入的账户和密码.
-
-    Mac系统中:keychain会存储用户第一次输入的账户密码,下次访问仓库时自动读取,不必重复输入.
-
-非Mac:Git提供credential helper机制,下次访问时自动读取.
-      
-      $ git config --global credential.helper cache (输入的账号密码会在内存中缓存一段时间,默认15分钟)
-      $ git config --global credential.helper store (输入的账号密码会存储在 ~/.git-credentials中)
-      
-二.SSH URLs 
-
-
-
-
-
-
-
-ps.题外话
+##### ps.题外话
 生成SSH key步骤: 
+```c
   1).  $ cd ~/.ssh  
        $ ls
        查看是否有id_rsa、id_rsa.pub,如果有可跳过步骤2.
@@ -59,5 +39,6 @@ ps.题外话
       测试该ssh. 
       若出现Hi username! You've successfully authenticated, but GitHub does not
       # provide shell access. 则成功. 
+ ```
       
       
