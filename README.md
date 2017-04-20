@@ -1,8 +1,9 @@
 # Multiple-account-authorization-processing-with-Git.
 
 简单来讲,Git权限校验方式有两种,以github为例: 
-  1).HTTPS URLs \n
-  2).SSH URLs
+   *
+   1).HTTPS URLs 
+   2).SSH URLs
  
  
 一.HTTPS URLs \n
@@ -11,8 +12,9 @@
 Mac系统中:keychain会存储用户第一次输入的账户密码,下次访问仓库时自动读取,不必重复输入.
 
 非Mac:Git提供credential helper机制,下次访问时自动读取.
-#       $ git config --global credential.helper cache (输入的账号密码会在内存中缓存一段时间,默认15分钟)
-       $ git config --global credential.helper store (输入的账号密码会存储在 ~/.git-credentials中)
+      
+      $ git config --global credential.helper cache (输入的账号密码会在内存中缓存一段时间,默认15分钟)
+      $ git config --global credential.helper store (输入的账号密码会存储在 ~/.git-credentials中)
       
 二.SSH URLs 
 
