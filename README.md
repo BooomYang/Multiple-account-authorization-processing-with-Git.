@@ -1,5 +1,5 @@
-##### Ps.题外话
-     使用场景未必广泛,更多的是透过此方式了解整个校验体系的必经环节，加深理解.
+###### Ps:使用场景未必广泛,更多的是透过此方式了解整个校验体系的必经环节，加深理解.
+     
 
 ### 简单来讲,Git权限校验方式有两种,以Github为例: 
     
@@ -74,7 +74,7 @@ $ git config --global credential.helper store (输入的账号密码会存储在
 <br>对应两个仓库: 
 * `BooomYang/BoomRepo`
 * `AllYang/AllYangRepo`
-<br>
+
 
 #### `SSH方案`
 ###### 前提 
@@ -140,6 +140,8 @@ url = git@AllYang:AllYang/AllYangRepo.git
 url = git@BooomYang:BooomYang/BoomRepo.git
 ```
 至此,解决了系统判断不了`ssh-key`导致的权限校验问题.
+
+
 
 #### `HTTPS方案`
 同理,我们要在代码仓库中能够区分采用哪个Github账号. <br>
