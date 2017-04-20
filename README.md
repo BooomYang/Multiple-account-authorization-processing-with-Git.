@@ -15,7 +15,6 @@ $ git config --global credential.helper store (输入的账号密码会存储在
 
 在使用SSH校验之前,需要现在本地计算机中生成`SSH Keypair`.
 
-##### ps.题外话
 * 生成SSH key步骤: 
 ```c
   1).  $ cd ~/.ssh  
@@ -38,8 +37,9 @@ $ git config --global credential.helper store (输入的账号密码会存储在
       提示是否输入passphrase密码,如果输入则push时需要输入此密码. <br>
       
       秘钥对创建好后,秘钥存储在本地(`~/.ssh/id_rsa`),公钥(`~/.ssh/id_rsa.pub`)应该添加到Github的账户.<br>
-      
-  3). 在Github上添加ssh key,即`id_rsa.pub`的内容拷贝进去. <br>
+```c      
+  3). 在Github上添加ssh key,即`id_rsa.pub`的内容拷贝进去. 
+```  
 ```c  
   4). # $ ssh -T git@github.com
 ```  
@@ -53,15 +53,17 @@ $ git config --global credential.helper store (输入的账号密码会存储在
      $ ssh-add ~/.ssh/id_rsa
      Identity added: /Users/yangwang/.ssh/id_rsa (/Users/yangwang/.ssh/id_rsa)
 ```     
-     添加完成后,就可查看到当前ssh-agent存储的秘钥
+      添加完成后,就可查看到当前ssh-agent存储的秘钥
 ```c
      $ ssh-add -l
      2048 SHA256:lw9meAZwbyZYTjXGTpY7G88k81LTPccBMZ/I2LT1bSI /Users/yangwang/.ssh/id_rsa (RSA)
 ```  
-     再次检测与Github的连接状态
+      再次检测与Github的连接状态
 ```c
      $ ssh -T git@github.com
      Hi BooomYang! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-     
+#### `同时使用多个Github账号`  
+
+
       
